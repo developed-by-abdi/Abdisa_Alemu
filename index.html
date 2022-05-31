@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link rel="shortcut icon" type="image/ico" href="img/author-black-main-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="js/main.js"></script>
+    <title>Abdisa Alemu</title>
+  </head>
+  <body>
+    <header class="header" id="home">
+      <div class="navigation">
+        <ul class="nav-lists">
+          <li><a href="#home" class="nav-home nav">Home</a></li>
+          <li><a href="#projs" class="nav-proj nav">Proj</a></li>
+          <li><a href="#about" class="nav-about nav">About</a></li>
+          <li><a href="#contact" class="nav-contact nav">Contact</a></li>
+          <a href="##" class="light nav">
+            <span class="toogle"></span>
+          </a>
+        </ul>
+      </div>
+      <div class="intro-section">
+        <h1 class="header-intro">Abdisa</h1>
+        <h1 class="header-intro second">Alemu</h1>
+      </div>
+      <div class="header-text-section">
+        <h1 class="header-main">
+          <span class="header-greeting">Hello!</span>
+          <span class="header-second-section">I am Abdisa Alemu</span>
+          <span class="header-third-section">Frontend web Dev.</span>
+        </h1>
+        <a href="resume/resume.pdf" class="btn-more">Resume</a>
+      </div>
+    </header>
+
+    <div class="projs" id="projs">
+      <h1 class="proj-header">Projects</h1>
+      <div class="all-proj">
+        <div class="first-proj proj">
+          <div class="proj-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor sit
+            amet consectetur adipisicing elit.
+          </div>
+          <a href="#" class="btn-more first-proj-btn">More</a>
+        </div>
+        <div class="second-proj proj">
+          <span class="proj-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor sit
+            amet consectetur adipisicing elit.
+          </span>
+          <a href="#" class="btn-more second-proj-btn">More</a>
+        </div>
+        <div class="third-proj proj">
+          <span class="proj-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor sit
+            amet consectetur adipisicing elit.
+          </span>
+          <a href="#" class="btn-more third-proj-btn">More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <h1 class="about-header">About</h1>
+      <div class="about-history-section">
+        <img
+          src="img/author-black-main.png"
+          alt="Abdisa Alemu"
+          class="author-photo"
+        />
+        <p class="about-content">
+          Hello every one i'm Abdisa. i'm 19 y/o. i live in Addis Ababa. <br />
+          I strated coding since 2020 and my first language was C++ and C++ was
+          a bit hard for me to learn. so, i jumped to web dev and my
+          <a href="https://t.me/lej_finto" class="finto">friend</a> told me to
+          start from html then css. he gave me a book called Headfirst html and
+          css. This book helps me alot i learn alot of things from it. After all
+          i started learing js (JAVA SCRIPT) i <span class="love">❤</span> js so
+          much but i'm not still working on it 😌. I built this site with only
+          Html5 and css3 and abit JS.<br />
+          This is a very short histoy of my coding journey.
+        </p>
+        <!-- <a href="#" class="btn-more first-proj-btn">More</a> -->
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <h1 class="contact-header">Contact</h1>
+      <div class="link">
+        <li><a href="#" class="socialmedia facebook">FaceBook</a></li>
+        <li>
+          <a href="https://t.me/Abdisa_A" class="socialmedia">Telegram</a>
+        </li>
+        <li>
+          <a href="mailto:abdisa.alemu.wako@gmail.com" class="socialmedia"
+            >Email</a
+          >
+        </li>
+      </div>
+      <span class="copyright"
+        >copyright &copy; 2022 All rights reserved, Abdisa Alemu</span
+      >
+    </footer>
+    <script>
+      let links = document.querySelector(".link");
+      let light = document.querySelector(".light");
+      let nav = document.querySelectorAll(".nav");
+      let navBg = document.querySelector(".nav-lists");
+      let projs = document.querySelectorAll(".proj");
+      let toogle = document.querySelector(".toogle");
+      let author = document.querySelector(".author-photo");
+      let color = "dark";
+
+      light.addEventListener("click", (event) => {
+        if (event.button == 0) {
+          if (color == "dark") {
+            author.style = "border: .5rem #fff solid;  transition: all .5s";
+            toogle.style =
+              "left: 44%; background-color: #333; transition: all .5s";
+            navBg.style = "background-color: #eee; transition: all .5s;";
+            links.style = "background-color: #fff; transition: all .5s";
+            for (let li of Array.from(nav)) {
+              li.style = "color: #333";
+            }
+            for (let proj of Array.from(projs)) {
+              proj.style =
+                "background-color: #fff; color: #333; transition: all .5s;";
+            }
+            color = "light";
+          } else if (color == "light") {
+            author.style = "border: .5rem #333 solid;  transition: all .5s";
+            toogle.style = "background-color: #fff; transition: all .5s";
+            navBg.style = "background-color: #333; transition: all .5s;";
+            links.style = "background-color: #333; transition: all .5s;";
+            for (let li of Array.from(nav)) {
+              li.style = "color: #fff";
+            }
+            for (let proj of Array.from(projs)) {
+              proj.style =
+                "background-color: rgb(97, 97, 97); color: #eee; transition: all .5s;";
+            }
+            color = "dark";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
